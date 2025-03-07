@@ -38,11 +38,11 @@ Esta es una aplicación web de **Verdad o Reto** interactiva con una **ruleta de
 ## 🛠 Instalación y Ejecución
 1. Clona este repositorio:
    ```sh
-   git clone https://github.com/tuusuario/reto-app.git
+   git clone git@github.com:agosquevedo/ruleta-verdadoreto.git
    ```
 2. Entra al directorio del proyecto:
    ```sh
-   cd reto-app
+   cd ruleta-verdadoreto
    ```
 3. Instala las dependencias:
    ```sh
@@ -71,7 +71,9 @@ Esta es una aplicación web de **Verdad o Reto** interactiva con una **ruleta de
 
 ## 🎯 Mejoras Futuras
 ✅ **Agregar un contador de retos completados.**
+
 ✅ **Opción de customizar los retos desde la interfaz.**
+
 ✅ **Modo multijugador con conexión en tiempo real.**
 
 ## 💖 Créditos
