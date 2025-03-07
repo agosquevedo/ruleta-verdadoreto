@@ -1,0 +1,21 @@
+{
+    "dares": [
+      { "level": "Fácil", "text": "Intercambia remera con la persona de la izquierda.", "emoji": "👕" },
+      { "level": "Fácil", "text": "Cuenta tu pensamiento intrusivo más recurrente.", "emoji": "🧠" },
+      { "level": "Fácil", "text": "Dale un abrazo a la persona a tu derecha.", "emoji": "🤗" },
+      { "level": "Intermedio", "text": "Haz contacto visual con la persona en frente por 30 segundos.", "emoji": "👀" },
+      { "level": "Intermedio", "text": "Agarra el teléfono de dos personas a la derecha y sacate una selfie con su celular.", "emoji": "📱" },
+      { "level": "Intermedio", "text": "Muestra la última foto de tu galería al grupo.", "emoji": "📸" },
+      { "level": "Difícil", "text": "Levanten la mano tres personas. Ahora elige con quién te casarías, con quién cogerías y a quién matarías.", "emoji": "💍" },
+      { "level": "Difícil", "text": "Haz una historia en Instagram etiquetando a alguien de la fiesta con el texto 'Me la pasé increíble contigo'.", "emoji": "📲" }
+    ],
+    "truths": [
+      { "level": "Fácil", "text": "¿Cuál es tu placer culposo?", "emoji": "🍩" },
+      { "level": "Fácil", "text": "¿Qué es lo más raro que hiciste por amor?", "emoji": "❤️" },
+      { "level": "Intermedio", "text": "¿A quién del grupo besarías?", "emoji": "💋" },
+      { "level": "Intermedio", "text": "Cuenta una anécdota vergonzosa de tu infancia.", "emoji": "🙈" },
+      { "level": "Difícil", "text": "Di algo que nunca has contado a nadie.", "emoji": "🛐" },
+      { "level": "Difícil", "text": "Si tuvieras que hacer un pacto con alguien en esta fiesta, ¿quién sería y por qué?", "emoji": "🤝" }
+    ]
+  }
+  
