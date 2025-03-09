@@ -1,8 +1,10 @@
 import { useState } from "react";
 import ChallengeWheel from "../components/ChallengeWheel";
 import challenges from "../data/challenges.json";
+import ChallengeCard from "./ChallengeCard";
 
 const GameController = () => {
+  const [spinning, setSpinning] = useState(false);
   const [category, setCategory] = useState(null);
   const [selectedChallenge, setSelectedChallenge] = useState(null);
   const [gameMode, setGameMode] = useState(null);
@@ -17,7 +19,7 @@ const GameController = () => {
 
   const getRandomChallenge = (type) => {
     if (!category) return null;
-    const filteredChallenges = challenges[type].filter(ch => ch.level === category.label);
+    const filteredChallenges = challenges[type].filter(ch => ch.level === category.option);
     return filteredChallenges[Math.floor(Math.random() * filteredChallenges.length)];
   };
 
@@ -37,9 +39,9 @@ const GameController = () => {
 
   return (
     <div className="game-container">
-      <ChallengeWheel onCategorySelected={handleCategorySelected} />
+      <ChallengeWheel onCategorySelected={handleCategorySelected} spinning={spinning} setSpinning={setSpinning}/>
 
-      {category && !selectedChallenge && (
+      {category && !selectedChallenge && !spinning && (
         <div className="button-container">
           <button onClick={handleTruth} className="truth-btn">Verdad</button>
           <button onClick={handleDare} className="dare-btn">Reto</button>
@@ -47,10 +49,7 @@ const GameController = () => {
       )}
 
       {selectedChallenge && (
-        <div className="challenge-result">
-          <h2>{gameMode}: {selectedChallenge.text}</h2>
-          <p>Si no cumples: {category.shots} shots o {category.exercises} {getRandomExercise()}</p>
-        </div>
+        <ChallengeCard challenge={selectedChallenge} setSelectedChallenge={setSelectedChallenge}/>
       )}
     </div>
   );
