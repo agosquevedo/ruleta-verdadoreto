@@ -15,7 +15,7 @@ body {
     padding: 2em;
     font-family: 'Poppins', sans-serif;
     color: white;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
 }
 
 .container .title {
@@ -37,13 +37,19 @@ body {
     align-items: center;
 }
 
-.button-container{
-    margin-top: 10%;
+.button-container {
+    margin-top: 1em;
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
 }
+
+
+
 
 @media (width < 768px) {
     .container .title_container{
-        margin-bottom: 20%;
+        margin-bottom: 10%;
     }
 
     .container .title {
@@ -52,5 +58,9 @@ body {
 
     .container .info {
         font-size: .8rem;
+    }
+
+    .button-container {
+        width: 50%;
     }
 }

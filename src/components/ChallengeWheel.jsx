@@ -1,28 +1,20 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Wheel } from 'react-custom-roulette';
 import { motion } from "framer-motion";
 import "../styles/ChallengeWheel.css";
 
-import { io } from "socket.io-client";
-
-const socket = io("http://localhost:3001");
-
 const theme = {
   darkText: "#222222",
-  lightText: "#e9ecef",
+  lightText: "#ffffff",
   medium: "#7b2cbf",
   hard: "#3c096c",
   easy: "#c77dff",
 };
 
 const ChallengeWheel = ({ onCategorySelected, spinning, setSpinning }) => {
-
   const categories = [
     { option: "Fácil", shots: 1, exercises: 10 },
     { option: "Intermedio", shots: 2, exercises: 20 },
-    { option: "Difícil", shots: 3, exercises: 30 },
-    { option: "Fácil", shots: 1, exercises: 10 },
-    { option: "Intermedio", shots: 2, exercises: 20},
     { option: "Difícil", shots: 3, exercises: 30 },
     { option: "Fácil", shots: 1, exercises: 10 },
     { option: "Intermedio", shots: 2, exercises: 20 },
@@ -31,24 +23,7 @@ const ChallengeWheel = ({ onCategorySelected, spinning, setSpinning }) => {
 
   const [prizeNumber, setPrizeNumber] = useState(0);
 
-  useEffect(() => {
-    socket.on("spinning", () => {
-      setSpinning(true);
-    });
-
-    socket.on("result", (data) => {
-      console.log(data);
-      setSpinning(false);
-    });
-
-    return () => {
-      socket.off("spinning");
-      socket.off("result");
-    };
-  }, []);
-
   const spinWheel = () => {
-    socket.emit("spin");
     const newPrizeNumber = Math.floor(Math.random() * categories.length);
     setPrizeNumber(newPrizeNumber);
     onCategorySelected(categories[newPrizeNumber]);
@@ -62,6 +37,7 @@ const ChallengeWheel = ({ onCategorySelected, spinning, setSpinning }) => {
       transition={{ delay: 2 }}
       className="wheel-container"
     >
+      <div className="neon-glow"></div> {/* Fondo de luz neón detrás */}
 
       <Wheel
         mustStartSpinning={spinning}
@@ -69,10 +45,7 @@ const ChallengeWheel = ({ onCategorySelected, spinning, setSpinning }) => {
         data={categories}
         backgroundColors={[theme.easy, theme.medium, theme.hard]}
         textColors={[theme.darkText, theme.lightText, theme.lightText]}
-        onStopSpinning={() => {
-          socket.emit("result", `Prize ${prizeNumber}`);
-          setSpinning(false);
-        }}
+        onStopSpinning={() => setSpinning(false)}
         spinDuration={0.5}
         innerBorderWidth={8}
         outerBorderWidth={8}
@@ -86,10 +59,15 @@ const ChallengeWheel = ({ onCategorySelected, spinning, setSpinning }) => {
         fontWeight={300}
       />
 
-      <button className="spin-btn" onClick={spinWheel} disabled={spinning}>
+      <motion.button 
+        className="spin-btn" 
+        onClick={spinWheel} 
+        disabled={spinning}
+        whileTap={{ scale: 0.95 }}
+        whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
+      >
         🎰 Girar Ruleta
-      </button>
-
+      </motion.button>
     </motion.div>
   );
 };
