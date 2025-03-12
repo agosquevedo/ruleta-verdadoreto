@@ -2,19 +2,27 @@
 
 body {
     margin: 0;
+    background: linear-gradient(132deg, #110126,#1C0240, #3C0673, #914AD9);
+    background-size: 400% 400%;
+    animation: BackgroundGradient 15s ease infinite;
 }
+
+@keyframes BackgroundGradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
 
 .container {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    backdrop-filter: blur(5px);
 }
 
 .container .title_container {
     padding: 2em;
     font-family: 'Poppins', sans-serif;
-    color: white;
+    color: #d4cece;
     margin-bottom: 1%;
 }
 
@@ -26,7 +34,7 @@ body {
 
 .container .info {
     font-size: 1.2rem;
-    color: rgb(177, 177, 177);
+    color: rgb(206, 202, 202);
     margin: .5em 0 0 .2em;
     font-weight: 200;
 }
@@ -43,6 +51,8 @@ body {
     display: flex;
     justify-content: space-evenly;
 }
+
+
 
 
 

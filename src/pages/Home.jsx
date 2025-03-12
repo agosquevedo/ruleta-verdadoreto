@@ -20,8 +20,10 @@ const Home = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
           className="info"
         >
+
           Gira la ruleta para ver la dificultad, elige <strong>Verdad</strong> o <strong>Reto</strong> y atrévete a jugar.
         </motion.p>
+
       </div>
 
       <GameController />

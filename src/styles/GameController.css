@@ -1,8 +1,6 @@
-/* Instrucciones */
-
 .instructions-container {
-    position: absolute;
-    background-color: #3e3e3e31;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6); /* Reducimos la opacidad */
     top: 0;
     left: 0;
     width: 100%;
@@ -10,59 +8,100 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
+    z-index: 2000; /* 🔥 Asegura que las instrucciones estén por encima */
+    backdrop-filter: blur(8px); /* Mantiene el efecto pero deja ver el fondo */
+    pointer-events: auto; /* Permite interactuar con las instrucciones */
 }
 
-
+/* ✨ Caja de instrucciones */
 .instructions {
     position: relative;
-    background: #120b0b;
-    padding: 20px;
-    border-radius: 10px;
+    background: #1a0329;
+    padding: 25px;
+    border-radius: 15px;
     text-align: center;
     color: white;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 20px rgba(178, 45, 255, 0.8);
+    max-width: 90%;
+    width: 400px;
 }
 
+/* 📌 Texto */
 .instructions h2 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+}
+
+.truth-btn{
+    margin-right: 15px;
+    background: #9045CB;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+.dare-btn{
+    margin-left: 15px;
+    background: #9045CB;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 1rem;
 }
 
 .instructions p {
     font-size: 1rem;
     margin: 5px 0;
+    line-height: 1.5;
 }
 
+/* ❌ Botón de cerrar */
 .close-btn {
-    margin-top: 10px;
-    background: #ff6b81;
+    margin-top: 15px;
+    background: #ff3b6c;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-size: 1rem;
 }
 
 .close-btn:hover {
-    background: #ff4757;
+    background: #ff1845;
+    transform: scale(1.05);
 }
 
-/* Botón para abrir instrucciones nuevamente */
+/* 📌 Botón flotante para abrir instrucciones */
 .open-instructions-btn {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: #222;
+    position: relative;
+    background: #E801EC;
     color: white;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 12px;
+    border-radius: 12px;
     border: none;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    box-shadow: 0px 0px 15px #7E009E;
+    transition: 0.3s ease-in-out;
 }
 
-.open-instructions-btn:hover {
-    background: #444;
+.instructions-btn-container{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
 }
+

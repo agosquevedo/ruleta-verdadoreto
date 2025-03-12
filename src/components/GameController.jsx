@@ -36,14 +36,39 @@ const GameController = () => {
 
   return (
     <div className="game-container">
-      {/* Botón para volver a abrir las instrucciones */}
-      <button className="open-instructions-btn" onClick={() => setShowInstructions(true)}>📜 Instrucciones</button>
+      {/* 📌 Botón flotante para abrir instrucciones nuevamente */}
+      {!showInstructions && (
+        <div className="instructions-btn-container">
+          <motion.button 
+            className="open-instructions-btn" 
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            onClick={() => setShowInstructions(true)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            📜 Instrucciones
+          </motion.button>
 
+          <motion.p 
+            className="made-by"
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
+          >
+            Hecho por Chuka & Agos ✨
+          </motion.p>
+        </div>
+      )}
+
+      {/* 📜 Instrucciones sobre la ruleta, pero sin ocultarla */}
       {showInstructions && (
-      <motion.div 
-        className="instructions-container"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
+        <motion.div 
+          transition={{ delay: 0.3 }}
+          className="instructions-container"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
         >
           <div className="instructions">
             <h2>📜 Instrucciones</h2>
@@ -51,24 +76,43 @@ const GameController = () => {
             <p>2️⃣ Escoge entre <strong>Verdad</strong> o <strong>Reto</strong>.</p>
             <p>3️⃣ <strong>LEE EN VOZ ALTA</strong> el reto y muestra tu celular al grupo.</p>
             <p>4️⃣ Si no lo cumples, prepárate para el castigo.</p>
-            <button className="close-btn" onClick={() => setShowInstructions(false)}>Entendido</button>
+            <motion.button 
+              className="close-btn" 
+              onClick={() => setShowInstructions(false)}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Entendido
+            </motion.button>
           </div>
         </motion.div>
       )}
 
-      <ChallengeWheel onCategorySelected={handleCategorySelected} spinning={spinning} setSpinning={setSpinning} />
+      {/* 🎡 Ruleta y botones SIEMPRE visibles */}
+      <ChallengeWheel 
+        onCategorySelected={handleCategorySelected} 
+        spinning={spinning} 
+        setSpinning={setSpinning} 
+      />
 
       {category && !selectedChallenge && !spinning && (
-        <div className="button-container">
+        <motion.div 
+          className="button-container"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
           <button onClick={handleTruth} className="truth-btn">Verdad</button>
           <button onClick={handleDare} className="dare-btn">Reto</button>
-        </div>
+</motion.div>
+
       )}
 
       {selectedChallenge && (
         <ChallengeCard challenge={selectedChallenge} setSelectedChallenge={setSelectedChallenge} />
       )}
     </div>
+
   );
 };
 
