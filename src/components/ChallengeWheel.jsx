@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Wheel } from 'react-custom-roulette';
 import { motion } from "framer-motion";
-import confetti from "canvas-confetti";
+import confetti from "../../node_modules/canvas-confetti"
 import "../styles/ChallengeWheel.css";
 import { Sparkles, PartyPopper, Gift } from "lucide-react";
 
