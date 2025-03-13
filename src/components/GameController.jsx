@@ -56,7 +56,7 @@ const GameController = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: 0.4 }}
           >
-            Hecho por Chuka & Agos ✨
+            Hecho por Chuka & Agos
           </motion.p>
         </div>
       )}
@@ -74,7 +74,7 @@ const GameController = () => {
             <h2>📜 Instrucciones</h2>
             <p>1️⃣ Gira la ruleta para elegir la dificultad.</p>
             <p>2️⃣ Escoge entre <strong>Verdad</strong> o <strong>Reto</strong>.</p>
-            <p>3️⃣ <strong>LEE EN VOZ ALTA</strong> el reto y muestra tu celular al grupo.</p>
+            <p>3️⃣ Muestra tu celular al grupo y luego lee el reto o verdad <strong>EN VOZ ALTA</strong>.</p>
             <p>4️⃣ Si no lo cumples, prepárate para el castigo.</p>
             <motion.button 
               className="close-btn" 

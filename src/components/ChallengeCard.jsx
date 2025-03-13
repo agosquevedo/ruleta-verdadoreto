@@ -40,11 +40,15 @@ const ChallengeCard = ({ challenge, setSelectedChallenge }) => {
             transition={{ delay: 1.5 }}
           >
             <p><strong>Si no cumples:</strong></p>
-            <p className="penalty">🍻 {penalty} shots <br /> o <br /> 💪 {penalty * 10} {randomExercise}</p>
+            <p className="penalty">
+              🍻 {penalty} {penalty === 1 ? "shot" : "shots"} <br /> 
+              o <br /> 
+              💪 {penalty * 10} {randomExercise}
+            </p>
           </motion.div>
 
           <motion.p className="warning">
-            📢 Muestra tu celular antes de leer el reto en voz alta
+            📢 Muestra tu celular antes de leer el reto o la verdad en voz alta
           </motion.p>
         </div>
 
