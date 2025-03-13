@@ -20,9 +20,14 @@ const GameController = () => {
 
   const getRandomChallenge = (type) => {
     if (!category) return null;
-    const filteredChallenges = challenges[type].filter(ch => ch.level === category.option);
-    return filteredChallenges[Math.floor(Math.random() * filteredChallenges.length)];
+    
+    const levelChallenges = challenges[type][category.option]; 
+    
+    if (!levelChallenges || levelChallenges.length === 0) return null;
+  
+    return levelChallenges[Math.floor(Math.random() * levelChallenges.length)];
   };
+  
 
   const handleTruth = () => {
     setGameMode("Verdad");

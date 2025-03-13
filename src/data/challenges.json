@@ -1,51 +1,59 @@
 {
-  "truths": [
-    { "level": "Fácil", "text": "¿Cuál es tu placer culposo?", "emoji": "🍩" },
-    { "level": "Fácil", "text": "Si fueras un personaje de caricatura, ¿quién serías y por qué?", "emoji": "🎭" },
-    { "level": "Fácil", "text": "¿Qué es lo más raro que hiciste por amor?", "emoji": "❤️" },
-    { "level": "Fácil", "text": "Si pudieras intercambiar vidas con alguien por un día, ¿quién sería?", "emoji": "🔄" },
-    { "level": "Fácil", "text": "¿Tienes alguna superstición extraña?", "emoji": "🔮" },
-    { "level": "Fácil", "text": "¿Cuál es la mentira más absurda que has dicho y que te creyeron?", "emoji": "🤥" },
-    { "level": "Fácil", "text": "¿Cuál es el meme que más te representa?", "emoji": "😂" },
-    { "level": "Fácil", "text": "Si pudieras revivir una sola experiencia de tu vida, ¿cuál sería?", "emoji": "⏳" },
-    
-    { "level": "Intermedio", "text": "¿Cuál es la cosa más vergonzosa que has hecho en público?", "emoji": "🙈" },
-    { "level": "Intermedio", "text": "Si tuvieras que salir en una cita con la persona dos lugares a tu derecha, ¿cómo la convencerías?", "emoji": "💑" },
-    { "level": "Intermedio", "text": "Cuenta una anécdota graciosa con alguien de la persona a tu izquierda.", "emoji": "🤣" },
-    { "level": "Intermedio", "text": "¿Qué es lo más atrevido que has enviado en un mensaje a la persona tres lugares a tu izquierda?", "emoji": "📱" },
-    { "level": "Intermedio", "text": "¿Te ha rechazado alguien aquí presente? Cuenta la historia.", "emoji": "💔" },
-    { "level": "Intermedio", "text": "Si pudieras cambiar algo de tu pasado, ¿qué sería?", "emoji": "🔙" },
-    { "level": "Intermedio", "text": "¿Qué es lo más raro que tienes en tu historial de búsquedas?", "emoji": "🧐" },
-    { "level": "Intermedio", "text": "Si tuvieras que confesar algo ahora mismo a la persona a tu derecha, ¿qué sería?", "emoji": "😳" },
-
-    { "level": "Difícil", "text": "Di el nombre de la última persona por la que tuviste un crush.", "emoji": "😢" },
-    { "level": "Difícil", "text": "¿Alguna vez besaste a la persona tres lugares a tu izquierda? Si sí, ¿cómo fue?", "emoji": "😘" },
-    { "level": "Difícil", "text": "Si pudieras besar a alguien aquí sin consecuencias, ¿a quién elegirías?", "emoji": "💋" },
-    { "level": "Difícil", "text": "¿Alguna vez traicionaste la confianza de la persona a tu derecha? Cuenta la historia.", "emoji": "😬" },
-    { "level": "Difícil", "text": "Confiesa un secreto que nunca le has contado a la persona dos lugares a tu derecha.", "emoji": "🤫" },
-    { "level": "Difícil", "text": "Si pudieras eliminar un error de tu vida, pero perderías un aprendizaje importante, ¿lo harías?", "emoji": "🤔" },
-    { "level": "Difícil", "text": "¿Alguna vez te han descubierto en una situación comprometedora?", "emoji": "😳" },
-    { "level": "Difícil", "text": "Si alguien de aquí tuviera que ser tu cómplice en un crimen, ¿a quién elegirías y por qué?", "emoji": "🕵️" }
-  ],
+  "truths": {
+    "Fácil": [
+      { "text": "¿Cuál es tu placer culposo?", "emoji": "🍩" },
+      { "text": "Si fueras un personaje de caricatura, ¿quién serías y por qué?", "emoji": "🎭" },
+      { "text": "¿Qué es lo más raro que hiciste por amor?", "emoji": "❤️" },
+      { "text": "Si pudieras intercambiar vidas con alguien por un día, ¿quién sería?", "emoji": "🔄" },
+      { "text": "¿Tienes alguna superstición extraña?", "emoji": "🔮" },
+      { "text": "¿Cuál es la mentira más absurda que has dicho y que te creyeron?", "emoji": "🤥" },
+      { "text": "¿Cuál es el meme que más te representa?", "emoji": "😂" },
+      { "text": "Si pudieras revivir una sola experiencia de tu vida, ¿cuál sería?", "emoji": "⏳" }
+    ],
+    "Intermedio": [
+      { "text": "¿Cuál es la cosa más vergonzosa que has hecho en público?", "emoji": "🙈" },
+      { "text": "Si tuvieras que salir en una cita con la persona dos lugares a tu derecha, ¿cómo la convencerías?", "emoji": "💑" },
+      { "text": "Cuenta una anécdota graciosa con alguien de la persona a tu izquierda.", "emoji": "🤣" },
+      { "text": "¿Qué es lo más atrevido que has enviado en un mensaje a la persona tres lugares a tu izquierda?", "emoji": "📱" },
+      { "text": "¿Te ha rechazado alguien aquí presente? Cuenta la historia.", "emoji": "💔" },
+      { "text": "Si pudieras cambiar algo de tu pasado, ¿qué sería?", "emoji": "🔙" },
+      { "text": "¿Qué es lo más raro que tienes en tu historial de búsquedas?", "emoji": "🧐" },
+      { "text": "Si tuvieras que confesar algo ahora mismo a la persona a tu derecha, ¿qué sería?", "emoji": "😳" }
+    ],
+    "Difícil": [
+      { "text": "Di el nombre de la última persona por la que tuviste un crush.", "emoji": "😢" },
+      { "text": "¿Alguna vez besaste a la persona tres lugares a tu izquierda? Si sí, ¿cómo fue?", "emoji": "😘" },
+      { "text": "Si pudieras besar a alguien aquí sin consecuencias, ¿a quién elegirías?", "emoji": "💋" },
+      { "text": "¿Alguna vez traicionaste la confianza de la persona a tu derecha? Cuenta la historia.", "emoji": "😬" },
+      { "text": "Confiesa un secreto que nunca le has contado a la persona dos lugares a tu derecha.", "emoji": "🤫" },
+      { "text": "Si pudieras eliminar un error de tu vida, pero perderías un aprendizaje importante, ¿lo harías?", "emoji": "🤔" },
+      { "text": "¿Alguna vez te han descubierto en una situación comprometedora?", "emoji": "😳" },
+      { "text": "Si alguien de aquí tuviera que ser tu cómplice en un crimen, ¿a quién elegirías y por qué?", "emoji": "🕵️" }
+    ]
+  },
   
-  "dares": [
-    { "level": "Fácil", "text": "Abraza a la persona de tu derecha.", "emoji": "🤗" },
-    { "level": "Fácil", "text": "Tómate una selfie con la persona dos lugares a tu izquierda.", "emoji": "📸" },
-    { "level": "Fácil", "text": "Imita a la persona tres lugares a tu derecha hasta que alguien adivine quién es.", "emoji": "🎭" },
-    { "level": "Fácil", "text": "Canta el coro de la primera canción que te venga a la mente.", "emoji": "🎤" },
-    { "level": "Fácil", "text": "Haz un chiste malo y trata de que la persona a tu izquierda se ría.", "emoji": "😂" },
-    { "level": "Fácil", "text": "Ponte los zapatos de la persona más cercana a tu derecha hasta el siguiente turno.", "emoji": "👞" },
-
-    { "level": "Intermedio", "text": "Haz una declaración de amor falsa a la persona dos lugares a tu izquierda.", "emoji": "💘" },
-    { "level": "Intermedio", "text": "Cambia de ropa con la persona de tu derecha durante dos rondas.", "emoji": "👕" },
-    { "level": "Intermedio", "text": "Dale un apodo a la persona más cercana a tu izquierda.", "emoji": "🏷️" },
-    { "level": "Intermedio", "text": "Imita cómo suena un animal hasta que la persona más cercana a ti lo adivine.", "emoji": "🐵" },
-    { "level": "Intermedio", "text": "Mira fijamente a los ojos de la persona tres lugares a tu derecha durante 20 segundos sin reírte.", "emoji": "👀" },
-
-    { "level": "Difícil", "text": "Besa en la mejilla a la persona cuatro asientos a tu izquierda.", "emoji": "😘" },
-    { "level": "Difícil", "text": "Susurra algo al oído de la persona dos lugares a tu derecha sin que los demás escuchen.", "emoji": "👂" },
-    { "level": "Difícil", "text": "Baila sensualmente frente a la persona tres lugares a tu izquierda durante 15 segundos.", "emoji": "🔥" },
-    { "level": "Difícil", "text": "Intercambia una prenda de ropa con la persona más cercana a ti.", "emoji": "👚" },
-    { "level": "Difícil", "text": "Haz que la persona más cercana a tu izquierda se sonroje sin tocarla.", "emoji": "😳" }
-  ]
+  "dares": {
+    "Fácil": [
+      { "text": "Abraza a la persona de tu derecha.", "emoji": "🤗" },
+      { "text": "Tómate una selfie con la persona dos lugares a tu izquierda.", "emoji": "📸" },
+      { "text": "Imita a la persona tres lugares a tu derecha hasta que alguien adivine quién es.", "emoji": "🎭" },
+      { "text": "Canta el coro de la primera canción que te venga a la mente.", "emoji": "🎤" },
+      { "text": "Haz un chiste malo y trata de que la persona a tu izquierda se ría.", "emoji": "😂" },
+      { "text": "Ponte los zapatos de la persona más cercana a tu derecha hasta el siguiente turno.", "emoji": "👞" }
+    ],
+    "Intermedio": [
+      { "text": "Haz una declaración de amor falsa a la persona dos lugares a tu izquierda.", "emoji": "💘" },
+      { "text": "Cambia de ropa con la persona de tu derecha durante dos rondas.", "emoji": "👕" },
+      { "text": "Dale un apodo a la persona más cercana a tu izquierda.", "emoji": "🏷️" },
+      { "text": "Imita cómo suena un animal hasta que la persona más cercana a ti lo adivine.", "emoji": "🐵" },
+      { "text": "Mira fijamente a los ojos de la persona tres lugares a tu derecha durante 20 segundos sin reírte.", "emoji": "👀" }
+    ],
+    "Difícil": [
+      { "text": "Besa en la mejilla a la persona cuatro asientos a tu izquierda.", "emoji": "😘" },
+      { "text": "Susurra algo al oído de la persona dos lugares a tu derecha sin que los demás escuchen.", "emoji": "👂" },
+      { "text": "Baila sensualmente frente a la persona tres lugares a tu izquierda durante 15 segundos.", "emoji": "🔥" },
+      { "text": "Intercambia una prenda de ropa con la persona más cercana a ti.", "emoji": "👚" },
+      { "text": "Haz que la persona más cercana a tu izquierda se sonroje sin tocarla.", "emoji": "😳" }
+    ]
+  }
 }
