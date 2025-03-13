@@ -1,50 +1,46 @@
-import { memo, useMemo } from "react";
+import { memo } from "react";
 import "../styles/ChallengeCard.css";
 import { motion } from "framer-motion";
 
 const ChallengeCard = memo(({ challenge, setSelectedChallenge }) => {
-  // Definir opciones de castigo
-  const exerciseOptions = useMemo(() => ["sentadillas", "burpees", "abdominales"], []);
-  const randomExercise = useMemo(
-    () => exerciseOptions[Math.floor(Math.random() * exerciseOptions.length)],
-    [exerciseOptions]
-  );
+  // Opciones de castigo
+  const exerciseOptions = ["sentadillas", "burpees", "abdominales"];
+  const randomExercise = exerciseOptions[Math.floor(Math.random() * exerciseOptions.length)];
 
   // Determinar el castigo según el nivel de dificultad
-  const penalty = useMemo(() => {
-    return challenge.level === "Fácil" ? 1 : challenge.level === "Intermedio" ? 2 : 3;
-  }, [challenge.level]);
+  const penalty = challenge.level === "Fácil" ? 1 : challenge.level === "Intermedio" ? 2 : 3;
 
   return (
     <motion.div 
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
-      exit={{ scale: 0 }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
+      transition={{ duration: 0.3 }}
       className="modal_container"
     >
       <div className="modal">
         <div className="modal_header">
           <motion.h1
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.3 }}
           >
             {challenge.level} {challenge.emoji}
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 100 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1 }}
+            transition={{ delay: 0.3, duration: 0.3 }}
           >
             {challenge.text}
           </motion.p>
 
           <motion.div 
             className="penalty-container"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.5, duration: 0.3 }}
           >
             <p><strong>Si no cumples:</strong></p>
             <p className="penalty">
@@ -59,7 +55,7 @@ const ChallengeCard = memo(({ challenge, setSelectedChallenge }) => {
             className="warning"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2 }}
+            transition={{ delay: 0.6, duration: 0.3 }}
           >
             📢 Muestra tu celular antes de leer el reto o la verdad en voz alta
           </motion.p>
@@ -67,12 +63,10 @@ const ChallengeCard = memo(({ challenge, setSelectedChallenge }) => {
 
         {/* Botón para salir */}
         <motion.button 
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
           className="spin-btn"
           onClick={() => setSelectedChallenge(null)}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
           Salir
         </motion.button>
