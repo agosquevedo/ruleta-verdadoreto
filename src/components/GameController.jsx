@@ -20,13 +20,13 @@ const GameController = () => {
 
   const getRandomChallenge = (type) => {
     if (!category) return null;
-    
-    const levelChallenges = challenges[type][category.option]; 
-    
-    if (!levelChallenges || levelChallenges.length === 0) return null;
+    const level = category.option; // "Fácil", "Intermedio", etc.
+    const pool = challenges[type][level];
+    const random = pool[Math.floor(Math.random() * pool.length)];
   
-    return levelChallenges[Math.floor(Math.random() * levelChallenges.length)];
+    return { ...random, level }; // 💡 le agregamos la propiedad "level"
   };
+  
   
 
   const handleTruth = () => {

@@ -1,14 +1,20 @@
-import { memo } from "react";
+import { useState, useEffect } from "react";
 import "../styles/ChallengeCard.css";
 import { motion } from "framer-motion";
 
-const ChallengeCard = memo(({ challenge, setSelectedChallenge }) => {
-  // Opciones de castigo
-  const exerciseOptions = ["sentadillas", "burpees", "abdominales"];
-  const randomExercise = exerciseOptions[Math.floor(Math.random() * exerciseOptions.length)];
+const ChallengeCard = ({ challenge, setSelectedChallenge }) => {
+  const [randomExercise, setRandomExercise] = useState("");
+  const [penalty, setPenalty] = useState(1);
 
-  // Determinar el castigo según el nivel de dificultad
-  const penalty = challenge.level === "Fácil" ? 1 : challenge.level === "Intermedio" ? 2 : 3;
+  useEffect(() => {
+    const exerciseOptions = ["sentadillas", "burpees", "abdominales"];
+    const level = challenge.level;
+    const newPenalty = level === "Fácil" ? 1 : level === "Intermedio" ? 2 : 3;
+    const random = exerciseOptions[Math.floor(Math.random() * exerciseOptions.length)];
+
+    setPenalty(newPenalty);
+    setRandomExercise(random);
+  }, [challenge]);
 
   return (
     <motion.div 
@@ -50,7 +56,6 @@ const ChallengeCard = memo(({ challenge, setSelectedChallenge }) => {
             </p>
           </motion.div>
 
-          {/* Advertencia de lectura en voz alta */}
           <motion.p 
             className="warning"
             initial={{ opacity: 0 }}
@@ -61,7 +66,6 @@ const ChallengeCard = memo(({ challenge, setSelectedChallenge }) => {
           </motion.p>
         </div>
 
-        {/* Botón para salir */}
         <motion.button 
           className="spin-btn"
           onClick={() => setSelectedChallenge(null)}
@@ -73,6 +77,6 @@ const ChallengeCard = memo(({ challenge, setSelectedChallenge }) => {
       </div>
     </motion.div>
   );
-});
+};
 
 export default ChallengeCard;
